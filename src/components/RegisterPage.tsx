@@ -176,7 +176,7 @@ const RegisterPage = () => {
                   </div>
                   <div className="space-y-1">
                     <label className="text-sm font-bold text-slate-700 flex items-center gap-2">
-                      <Lock size={16} /> Confirm
+                      <Lock size={16} /> Confirm Password
                     </label>
                     <div className="relative">
                       <Field
