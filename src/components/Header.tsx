@@ -37,7 +37,7 @@ const Header = () => {
           </span>
         </div>
 
-        <div className="h-10 w-10 bg-slate-100 rounded-full flex items-center justify-center border-2 border-white shadow-sm">
+        <div className="hidden h-10 w-10 bg-slate-100 rounded-full md:flex items-center justify-center border-2 border-white shadow-sm">
           <User size={20} className="text-slate-500" />
         </div>
 
