@@ -28,7 +28,7 @@ const Header = () => {
 
       {/* User Info & Action */}
       <div className="flex items-center gap-4">
-        <div className="flex-col items-end hidden md:flex">
+        <div className="flex-col items-end flex">
           <span className="text-xs font-bold text-slate-400 uppercase tracking-widest">
             Logged in as
           </span>
