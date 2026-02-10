@@ -15,9 +15,15 @@ const QuizResult = ({ questions, userAnswers, onReset }: QuizResultProps) => {
   ).length;
 
   const totalQuestions = questions.length;
-  const skippedCount = userAnswers.filter((ans) => !ans).length;
+  const skippedCount = questions.filter((_, i) => {
+    return !userAnswers[i];
+  }).length;
   const wrongCount = totalQuestions - correctCount - skippedCount;
   const percentage = Math.round((correctCount / totalQuestions) * 100);
+
+  console.log("Jumlah Soal:", questions.length);
+  console.log("Jumlah Jawaban Masuk:", userAnswers.length);
+  console.log("Isi userAnswers:", userAnswers);
 
   return (
     <div className="min-h-screen bg-linear-to-br from-slate-50 to-blue-100 p-4 md:p-8 flex flex-col items-center">

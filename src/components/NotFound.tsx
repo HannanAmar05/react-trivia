@@ -2,7 +2,7 @@ import notfound from "/not found.png";
 
 type NotFoundType = {
   isError: boolean;
-  handleResetQuiz: (toHome? : boolean) => void;
+  handleResetQuiz: (toHome?: boolean) => void;
 };
 
 const NotFound = ({ isError, handleResetQuiz }: NotFoundType) => {
@@ -17,12 +17,12 @@ const NotFound = ({ isError, handleResetQuiz }: NotFoundType) => {
 
       <div className="max-w-md">
         <h3 className="text-2xl md:text-3xl font-bold text-slate-800 mb-2">
-          {isError ? "Koneksi Terganggu" : "Kombinasi Soal Tidak Ditemukan"}
+          {isError ? "Connection Issue" : "No Questions Found"}
         </h3>
         <p className="text-slate-500 mb-8">
           {isError
-            ? "Gagal mengambil data dari server. Periksa koneksi internetmu."
-            : "Maaf, Open Trivia DB tidak memiliki soal dengan kategori, kesulitan, atau tipe tersebut. Coba ganti settinganmu."}
+            ? "Failed to fetch data from the server. Please check your internet connection."
+            : "Sorry, Open Trivia DB does not have questions matching the selected category, difficulty, or type. Try adjusting your settings."}
         </p>
       </div>
 
